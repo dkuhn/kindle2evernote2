@@ -1,43 +1,12 @@
 # kindle2evernote2
 
-Export Kindle's My Clippings.txt to Evernote.
-
-My original script is available at the [kindle2evernote](https://github.com/benhorvath/kindle2evernote) repo. This script was based on scraping a single page from Amazon containing all of a user's Kindle highlights.
-
-Sometime in 2018, Amazon changed this interface and the original strategy was
-no longer an option.
-
-This is an attempt to use My Clippings.txt rather than read.kindle.com. I hope
-to add a number of additional features as well.
-
-TODO
-====
-- Process My Clippings.txt into discrete data
-- Test new clippings in the original EverNote API object
-- Algorithm to convert highlights into a short ID code
-- Keep store of note IDs already processed
-- Write script to run process upon mounting Kindle for Mac OS
-
+Organize and Export Your Kindle's My Clippings.txt to Evernote.
 
 ## Get Started
 
 ### Dependencies
 
-The main dependencies are the HTML parsing library [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) and the [Evernote API Python SDK](https://github.com/evernote/evernote-sdk-python).
-
-BeautifulSoup can be installed by:
-
-    pip install BeautifulSoup4
-
-The Evernote SDK requires:
-
-    git submodule add git://github.com/evernote/evernote-sdk-python/ evernote
-    git submodule init
-    git submodule update
-
-Then go the installed directoy and run setup.py:
-
-    python setup.py install
+conda create 
 
 ### Evernote Developer Token
 
@@ -67,11 +36,6 @@ To see log output, use the -v or --verbose option
 
 ## About
 
-This project began as a fork of [**mattnorris's WhisperNote**](https://github.com/mattnorris/whispernote). By the time I was finished with my modifications, however, it was almost a completely new code base. The only remaining similarities between WhisperNote and Kindle2Evernote are the formatting of the notes in Evernote themselves. Perhaps the greatest difference is Whispernote used Gmail to load the notes to Evernote, while my script completely relies on the Evernote API -- and now also uses My Highlights.txt (since Amazon revamped their Kinde notes page.) My script also makes heavy use of object oriented paradigmn which is not that case for Whispernote.
+This is a fork from of benhorvath@gmail.com [kindle2evernote2](https://github.com/benhorvath/kindle2evernote2) repo. This version is based on python3 and uses conda for installation.
 
-### TODO
-The base functionality of the project has been completed, but I have several changes in mind for the cuture. See TODO.txt. The biggest change I envision is for Kindle2Evernote to remember what notes it's already added.
 
-## Contact
-
-Please contact me at benhorvath@gmail.com if you encounter any unhandled errors preventing a smooth user experience.
